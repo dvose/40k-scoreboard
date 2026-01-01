@@ -7,7 +7,7 @@ import type { Player } from "../models/player";
 
 const GameSessionPage = () => {
   const params = useParams();
-  const { loadGameSession, updatePlayerScores, nextPlayer, endRound } = useGameSession();
+  const { loadGameSession, updatePlayerScores, nextPlayer } = useGameSession();
   const [gameSession, setGameSession] = useState<GameSession | undefined>(undefined);
   const [playerSessions, setPlayerSessions] = useState<{session: PlayerGameSession, player: Player | undefined}[]>([]);
   const [editingCell, setEditingCell] = useState<{
